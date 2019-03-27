@@ -1,0 +1,7 @@
+27-Mar-2019
+
+ALTER TABLE `san_apps`.`ihub_standards`
+ADD COLUMN `acronym` VARCHAR(10) NULL DEFAULT NULL AFTER `name`;
+
+ALTER TABLE `san_apps`.`ihub_operations` 
+ADD COLUMN `legal_id` VARCHAR(80) NULL DEFAULT NULL AFTER `owner_gender`;
