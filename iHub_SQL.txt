@@ -6,26 +6,63 @@ ADD COLUMN `acronym` VARCHAR(10) NULL DEFAULT NULL AFTER `name`;
 ALTER TABLE `san_apps`.`ihub_operations` 
 ADD COLUMN `legal_id` VARCHAR(80) NULL DEFAULT NULL AFTER `owner_gender`;
 
-ALTER TABLE `san_apps_sandbox`.`ihub_operations` 
+ALTER TABLE `san_apps`.`ihub_operations` 
 ADD COLUMN `primary_contact_2` VARCHAR(26) NULL DEFAULT NULL AFTER `primary_contact`,
 ADD COLUMN `primary_contact_3` VARCHAR(26) NULL DEFAULT NULL AFTER `primary_contact_2`,
 ADD COLUMN `owner_legal_contact_2` VARCHAR(26) NULL DEFAULT NULL AFTER `owner_legal_contact`,
 ADD COLUMN `owner_legal_contact_3` VARCHAR(26) NULL DEFAULT NULL AFTER `owner_legal_contact_2`;
 
-CREATE TABLE `san_apps_sandbox`.`ihub_tool_saf_general_information` (
+CREATE TABLE `san_apps`.`ihub_tool_saf_general_information` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `auditor` VARCHAR(80) NULL DEFAULT NULL,
   `visit_date` VARCHAR(80) NULL DEFAULT NULL,
   `general_comments` VARCHAR(6000) NULL DEFAULT NULL,
+  `created_by` SMALLINT(6) NOT NULL,
+  `created_date` INT(11) NOT NULL,
+  `modified_by` SMALLINT(6) NOT NULL,
+  `modified_date` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `id_UNIQUE` (`id` ASC));
 
-CREATE TABLE `san_apps_sandbox`.`ihub_tool_gips_general_information` (
+CREATE TABLE `san_apps`.`ihub_tool_gips_general_information` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `auditor` VARCHAR(80) NULL DEFAULT NULL,
   `visit_date` VARCHAR(80) NULL DEFAULT NULL,
   `general_comments` VARCHAR(6000) NULL DEFAULT NULL,
+  `created_by` SMALLINT(6) NOT NULL,
+  `created_date` INT(11) NOT NULL,
+  `modified_by` SMALLINT(6) NOT NULL,
+  `modified_date` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `id_UNIQUE` (`id` ASC));
   
-  
+  CREATE TABLE `san_apps`.`ihub_tool_elo_general_information` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `auditor` VARCHAR(80) NULL DEFAULT NULL,
+  `visit_date` VARCHAR(80) NULL DEFAULT NULL,
+  `operation_name` VARCHAR(80) NULL DEFAULT NULL,
+  `analysis_unit` VARCHAR(80) NULL DEFAULT NULL,
+  `manager_name` VARCHAR(80) NULL DEFAULT NULL,
+  `vendor_name` VARCHAR(80) NULL DEFAULT NULL,
+  `contracted_vendor_list` VARCHAR(500) NULL DEFAULT NULL,
+  `outsourced_vendor_list` VARCHAR(500) NULL DEFAULT NULL,
+  `unit_operations` VARCHAR(500) NULL DEFAULT NULL,
+  `farm_id` VARCHAR(80) NULL DEFAULT NULL,
+  `number_of_workers` SMALLINT(6) NULL DEFAULT NULL,
+  `gs_name` VARCHAR(80) NULL DEFAULT NULL,
+  `unit_plant` VARCHAR(80) NULL DEFAULT NULL,
+  `provider_name` VARCHAR(80) NULL DEFAULT NULL,
+  `provider_list` VARCHAR(500) NULL DEFAULT NULL,
+  `provider_execution_list` VARCHAR(500) NULL DEFAULT NULL,
+  `refused_to` VARCHAR(80) NULL DEFAULT NULL,
+  `general_comments` VARCHAR(6000) NULL DEFAULT NULL,
+  `conclusion` VARCHAR(100) NULL DEFAULT NULL,
+  `created_by` SMALLINT(6) NOT NULL,
+  `created_date` INT(11) NOT NULL,
+  `modified_by` SMALLINT(6) NOT NULL,
+  `modified_date` INT(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC));
+
+
+
