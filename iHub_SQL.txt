@@ -65,5 +65,12 @@ CREATE TABLE `san_apps`.`ihub_tool_gips_general_information` (
   PRIMARY KEY (`id`),
   UNIQUE INDEX `id_UNIQUE` (`id` ASC));
 
+ALTER TABLE `san_apps_sandbox`.`ihub_sai_general_information_responses` 
+RENAME TO  `san_apps_sandbox`.`ihub_tool_sai_general_information` ;
+
+
+
+
+
 
 
