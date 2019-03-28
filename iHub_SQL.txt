@@ -12,3 +12,10 @@ ADD COLUMN `primary_contact_3` VARCHAR(26) NULL DEFAULT NULL AFTER `primary_cont
 ADD COLUMN `owner_legal_contact_2` VARCHAR(26) NULL DEFAULT NULL AFTER `owner_legal_contact`,
 ADD COLUMN `owner_legal_contact_3` VARCHAR(26) NULL DEFAULT NULL AFTER `owner_legal_contact_2`;
 
+CREATE TABLE `san_apps_sandbox`.`ihub_tool_saf_general_information` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `auditor` VARCHAR(80) NULL DEFAULT NULL,
+  `visit_date` VARCHAR(80) NULL DEFAULT NULL,
+  `general_comments` VARCHAR(6000) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC));
