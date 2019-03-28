@@ -19,3 +19,13 @@ CREATE TABLE `san_apps_sandbox`.`ihub_tool_saf_general_information` (
   `general_comments` VARCHAR(6000) NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `id_UNIQUE` (`id` ASC));
+
+CREATE TABLE `san_apps_sandbox`.`ihub_tool_gips_general_information` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `auditor` VARCHAR(80) NULL DEFAULT NULL,
+  `visit_date` VARCHAR(80) NULL DEFAULT NULL,
+  `general_comments` VARCHAR(6000) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC));
+  
+  
