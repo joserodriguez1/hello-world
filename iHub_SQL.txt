@@ -5,3 +5,10 @@ ADD COLUMN `acronym` VARCHAR(10) NULL DEFAULT NULL AFTER `name`;
 
 ALTER TABLE `san_apps`.`ihub_operations` 
 ADD COLUMN `legal_id` VARCHAR(80) NULL DEFAULT NULL AFTER `owner_gender`;
+
+ALTER TABLE `san_apps_sandbox`.`ihub_operations` 
+ADD COLUMN `primary_contact_2` VARCHAR(26) NULL DEFAULT NULL AFTER `primary_contact`,
+ADD COLUMN `primary_contact_3` VARCHAR(26) NULL DEFAULT NULL AFTER `primary_contact_2`,
+ADD COLUMN `owner_legal_contact_2` VARCHAR(26) NULL DEFAULT NULL AFTER `owner_legal_contact`,
+ADD COLUMN `owner_legal_contact_3` VARCHAR(26) NULL DEFAULT NULL AFTER `owner_legal_contact_2`;
+
