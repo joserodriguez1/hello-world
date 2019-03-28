@@ -68,6 +68,24 @@ CREATE TABLE `san_apps`.`ihub_tool_gips_general_information` (
 ALTER TABLE `san_apps_sandbox`.`ihub_sai_general_information_responses` 
 RENAME TO  `san_apps_sandbox`.`ihub_tool_sai_general_information` ;
 
+ALTER TABLE `san_apps_sandbox`.`ihub_tool_sai_general_information` 
+ADD COLUMN `g01_comments` VARCHAR(1000) NULL DEFAULT NULL AFTER `extra_2_response`,
+ADD COLUMN `g02_comments` VARCHAR(1000) NULL DEFAULT NULL AFTER `g01_comments`,
+ADD COLUMN `g03_comments` VARCHAR(1000) NULL DEFAULT NULL AFTER `g02_comments`,
+ADD COLUMN `g04_comments` VARCHAR(1000) NULL DEFAULT NULL AFTER `g03_comments`,
+ADD COLUMN `g05_comments` VARCHAR(1000) NULL DEFAULT NULL AFTER `g04_comments`,
+ADD COLUMN `g06_comments` VARCHAR(1000) NULL DEFAULT NULL AFTER `g05_comments`,
+ADD COLUMN `g07_comments` VARCHAR(1000) NULL DEFAULT NULL AFTER `g06_comments`,
+ADD COLUMN `g08_comments` VARCHAR(1000) NULL DEFAULT NULL AFTER `g07_comments`,
+ADD COLUMN `g09_comments` VARCHAR(1000) NULL DEFAULT NULL AFTER `g08_comments`,
+ADD COLUMN `g10_comments` VARCHAR(1000) NULL DEFAULT NULL AFTER `g09_comments`,
+ADD COLUMN `g11_comments` VARCHAR(1000) NULL DEFAULT NULL AFTER `g10_comments`,
+ADD COLUMN `g12_comments` VARCHAR(1000) NULL DEFAULT NULL AFTER `g11_comments`,
+ADD COLUMN `g13_comments` VARCHAR(1000) NULL DEFAULT NULL AFTER `g12_comments`,
+ADD COLUMN `g14_comments` VARCHAR(1000) NULL DEFAULT NULL AFTER `g13_comments`,
+ADD COLUMN `g15_comments` VARCHAR(1000) NULL DEFAULT NULL AFTER `g14_comments`,
+ADD COLUMN `extra_1_comments` VARCHAR(1000) NULL DEFAULT NULL AFTER `g15_comments`,
+ADD COLUMN `extra_2_comments` VARCHAR(1000) NULL DEFAULT NULL AFTER `extra_1_comments`;
 
 
 
