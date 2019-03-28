@@ -38,6 +38,7 @@ CREATE TABLE `san_apps`.`ihub_tool_gips_general_information` (
   
   CREATE TABLE `san_apps`.`ihub_tool_elo_general_information` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `process` VARCHAR(26) NOT NULL,
   `auditor` VARCHAR(80) NULL DEFAULT NULL,
   `visit_date` VARCHAR(80) NULL DEFAULT NULL,
   `operation_name` VARCHAR(80) NULL DEFAULT NULL,
