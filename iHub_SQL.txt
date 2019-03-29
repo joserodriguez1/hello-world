@@ -87,6 +87,12 @@ ADD COLUMN `g15_comments` VARCHAR(1000) NULL DEFAULT NULL AFTER `g14_comments`,
 ADD COLUMN `extra_1_comments` VARCHAR(1000) NULL DEFAULT NULL AFTER `g15_comments`,
 ADD COLUMN `extra_2_comments` VARCHAR(1000) NULL DEFAULT NULL AFTER `extra_1_comments`;
 
+CREATE TABLE `san_apps`.`ihub_tool_ra_general_information` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `process` VARCHAR(26) NOT NULL,
+  `auditor` VARCHAR(80) NULL DEFAULT NULL,
+  `visit_date` VARCHAR(80) NULL DEFAULT NULL,
+  `general_comments` VARCHAR(6000) NULL DEFAULT NULL);
 
 
 
